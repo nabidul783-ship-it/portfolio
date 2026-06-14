@@ -1,0 +1,33 @@
+<!doctype html><html lang="en"><head><title>6-DOF Robotic Arm Analysis | Nabidul Islam</title><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Mechanical engineering portfolio for Nabidul Islam: design, robotics, thermal systems, FEA, mechatronics, and sustainability projects.">
+<link rel="stylesheet" href="assets/css/styles.css">
+<script defer src="assets/js/main.js"></script></head><body><div class="page"><header class="site-header">
+  <a class="brand" href="index.html" aria-label="Home"><span class="brand-mark">NI</span><span>Nabidul Islam</span></a>
+  <button class="nav-toggle" aria-label="Open navigation" data-nav-toggle><span></span><span></span></button>
+  <nav class="nav" data-nav>
+    <a  href="index.html">About</a>
+    <a  href="resume.html">Resume</a>
+    <a class="active" href="projects.html">Projects</a>
+    <a class="nav-cta" href="mailto:nabidulislam16@gmail.com">Contact</a>
+  </nav>
+</header>
+<main class="container project-detail">
+  <section class="project-top">
+    <div class="page-title"><a class="crumb" href="projects.html">← Back to Projects</a><h1>6-DOF Robotic Arm Analysis</h1><p>A kinematic, dynamic, trajectory, and control study of an anthropomorphic arm with a spherical wrist for a reach, grasp, and pick-up task.</p><div class="pdf-links"><a href="assets/pdfs/six-dof-robotics-project.pdf" target="_blank" rel="noreferrer">Project Report</a></div></div>
+    <div class="project-visual"><img src="assets/images/robot-arm.png" alt="6-DOF Robotic Arm Analysis hero visual"></div>
+  </section>
+  <section class="metric-strip"><div class="metric"><strong>6 DOF</strong><span>Revolute-joint robot</span></div><div class="metric"><strong>(1, 0.3, 0.15) m</strong><span>Target end-effector position</span></div><div class="metric"><strong>0.1559</strong><span>Jacobian determinant at target</span></div><div class="metric"><strong>4 segments</strong><span>Connected path pieces</span></div><div class="metric"><strong>PD + PID</strong><span>Controllers compared</span></div><div class="metric"><strong>MATLAB</strong><span>Trajectory and control environment</span></div></section>
+  <section class="content-grid">
+    <aside class="side-panel"><h3>Skills Used</h3><div class="stack"><span>Robotics</span><span>MATLAB</span><span>SolidWorks</span><span>Forward Kinematics</span><span>Inverse Kinematics</span><span>Jacobian Analysis</span><span>Trajectory Planning</span><span>Quintic Polynomials</span><span>Dynamics</span><span>PD Control</span><span>PID Control</span></div></aside>
+    <div>
+      <article class="summary-block"><h2>Project Summary</h2><p>A 6-degree-of-freedom anthropomorphic robotic arm with a spherical wrist was analyzed for a reach, grasp, and pick-up task. The robot was treated as an industrial-style revolute-joint manipulator with a gripper, requiring both precise position control and controlled orientation of the end effector.</p><p>The analysis covered Denavit-Hartenberg frame assignment, forward kinematics, inverse kinematics, Jacobian assembly, inverse velocity, inverse acceleration, trajectory generation, dynamic torque estimation, and closed-loop control. The robot moved from a home configuration toward an end-effector target position of x = 1 m, y = 0.3 m, and z = 0.15 m.</p><p>Because the robot used a spherical wrist, inverse kinematics was split into a position problem for joints 1–3 and an orientation problem for joints 4–6. A damped least-squares style approach was used during trajectory generation to avoid issues near singular configurations.</p></article>
+      <article class="summary-block"><h2>Technical Process</h2><ul><li>Created DH frames and transformation matrices for all six revolute joints.</li><li>Derived the end-effector transformation matrix and separated wrist-center position from tool orientation.</li><li>Built the 6×6 Jacobian using linear and angular velocity contributions from each joint frame.</li><li>Verified direct Jacobian inversion at the target pose by checking that the determinant was nonzero, with a value of 0.1559.</li><li>Generated a connected four-piece trajectory and smoothed joint motion using MATLAB quintic polynomial trajectories.</li><li>Compared PD and PID controllers by tracking joint position, velocity, torque demand, and final end-effector error.</li></ul></article>
+      <article class="summary-block"><h2>Results and Outcomes</h2><ul><li>Produced smooth joint position, velocity, and acceleration profiles for a multi-segment reach, grasp, and lift motion.</li><li>Confirmed that the target pose was not singular based on a nonzero Jacobian determinant.</li><li>Identified gravity as the main contributor to torque, especially at joints 2 and 3, while Coriolis and damping terms were relatively small for the slow motion profile.</li><li>Found that both PD and PID controllers completed the task, with PID giving lower tracking error and smaller final end-effector error while staying within the assumed torque limits.</li></ul></article>
+      <article class="summary-block"><h2>Project Visuals</h2><div class="gallery"><img src="assets/images/robot-arm.png" alt="6-DOF Robotic Arm Analysis project image"><img src="assets/images/robot-dh.png" alt="6-DOF Robotic Arm Analysis project image"><img src="assets/images/robot-graphs.png" alt="6-DOF Robotic Arm Analysis project image"></div></article>
+    </div>
+  </section>
+</main><footer class="footer">
+  <div><strong>Nabidul Islam</strong><span>Mechanical Engineering Portfolio</span></div>
+  <div class="footer-links"><a href="mailto:nabidulislam16@gmail.com">Email</a><a href="https://linkedin.com/in/nabidul-islam-5b1bb9274/">LinkedIn</a><a href="projects.html">Projects</a></div>
+</footer></div></body></html>
